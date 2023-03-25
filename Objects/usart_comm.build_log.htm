@@ -1,0 +1,116 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Reyadath Ullah, University of Dhaka, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\akib1\OneDrive\Documents\CODE\stm32\MCU\only_usart_com\usart_comm.uvprojx
+Project File Date:  03/24/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f446xx.s...
+GPIO.c(34): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+GPIO.c(47): warning: // comments are not allowed in this language [-Wcomment]
+//Reyadath Ullah (33)
+^
+2 warnings generated.
+compiling GPIO.c...
+compiling system_stm32f4xx.c...
+CLOCK.c(31): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+CLOCK.c(60): warning: // comments are not allowed in this language [-Wcomment]
+        RCC->CR |=RCC_CR_HSEON; // set CR bit 16 
+                                ^
+2 warnings generated.
+compiling CLOCK.c...
+SYS_INIT.c(36): warning: // comments are not allowed in this language [-Wcomment]
+// Systick ISR executes every milli-second
+^
+1 warning generated.
+compiling SYS_INIT.c...
+USART.c(31): warning: In file included from...
+./USART.h(49): warning: // comments are not allowed in this language [-Wcomment]
+// USART 2 Configuration
+^
+USART.c(35): warning: In file included from...
+./CLOCK.h(39): warning: // comments are not allowed in this language [-Wcomment]
+#define PLL_P 0 //0 to the sixteenth position (PLL=2)
+                ^
+USART.c(51): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint8_t i=0;i<size;i++){
+            ^
+USART.c(51): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+USART.c(62): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint8_t i=0;i<size;i++){
+            ^
+USART.c(62): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+USART.c(80): warning: // comments are not allowed in this language [-Wcomment]
+// Send a string to the UART PORTx
+^
+7 warnings generated.
+compiling USART.c...
+linking...
+.\Objects\usart_comm.axf: Error: L6218E: Undefined symbol main (referred from __rtentry2.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 1 error messages.
+".\Objects\usart_comm.axf" - 1 Error(s), 12 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.0.pack
+                Keil.STM32F4xx_DFP.2.17.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/akib1/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/akib1/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F446xx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f446xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
