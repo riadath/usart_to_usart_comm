@@ -77,15 +77,20 @@ void UART_SendChar(USART_TypeDef *usart,uint8_t c){
 	while(!(usart->SR & (1<<7)));
 }
 
-// Send a string to the UART PORTx
+/* Send a string to the UART PORTx */
+
 void UART_SendString(USART_TypeDef *usart,const char *s){
-	while (*s) {UART_SendChar(usart,*s);s++;}
+	while (*s) {
+		UART_SendChar(usart,*s);
+		s++;
+	}
 }
 
 uint8_t UART_GetChar(USART_TypeDef *usart){
 	uint8_t tmp;
 	while(!(usart->SR & (1<<5)));
-	tmp=(uint8_t)usart->DR;
+	
+	tmp = (uint8_t)usart->DR;
 	return tmp;
 }
 void UART_GetString(USART_TypeDef *uart,uint16_t size,uint8_t* buff)
@@ -133,6 +138,7 @@ void UART2_Config(void){
 	
 	//3. Enable UART on USART_CR1 rgister
 	USART2->CR1 = 0x00; //clear USART
+	
 	USART2->CR1 |= (1<<13);  // UE-bit enable USART
 	
 	//4. Program M bit in USART CR1 to define the word length

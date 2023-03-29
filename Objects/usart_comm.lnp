@@ -1,4 +1,5 @@
 --cpu=Cortex-M4.fp.sp
+".\objects\main.o"
 ".\objects\clock.o"
 ".\objects\gpio.o"
 ".\objects\sys_init.o"
